@@ -4,11 +4,12 @@ import "./globalCSS.css"
 // Components
 import Footer from "./components/Footer"
 import Header from "./components/Header"
+import Cart from "./pages/Cart"
 import Kids from "./pages/Kids"
 import Men from "./pages/Men"
 import Product from "./pages/Product"
-import Shop from "./pages/shop"
 import Women from "./pages/Women"
+import Shop from "./pages/shop"
 // Page routes
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="/product" element={<Product />}>
             <Route path=':id' element={<Product />} />
           </Route>
+          <Route path="/cart" element={<Cart />} />
         </Routes>
         <Footer />
       </BrowserRouter>

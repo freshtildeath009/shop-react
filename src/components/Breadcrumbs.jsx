@@ -17,7 +17,14 @@ const BreadcrumbsComponent = styled.div`
   align-items: center;
   margin: 1rem;
   flex-wrap: wrap;
-  font-size: var(--fs-0-8);
+  padding: 1rem;
+  font-size: var(--fs-1);
+  @media (max-width: 665px) {
+    font-size: 0.8rem ;
+  }
+  @media (max-width: 560px) {
+    font-size: 0.5rem ;
+  }
     p{
       display: flex;
       justify-content: center;

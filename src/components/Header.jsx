@@ -32,10 +32,12 @@ const Header = () => {
                     </div>
                     <ul className='header-links-container'>
                         <div className='header-user-container'>
-                            <i className="fa-solid fa-user link"></i>
+                            <i id='user' className="fa-solid fa-user icon"></i>
                         </div>
                         <div className='header-cart-container'>
-                            <i id='cart' className="fa-solid fa-cart-shopping link"></i>
+                            <Link to="/cart">
+                                <i id='cart' className="fa-solid fa-cart-shopping icon"></i>
+                            </Link>
                         </div>
                         <ul className='menu-container'>
                             <i id='menu' onClick={_handleShowMenu} className="fa-solid fa-bars"></i>
@@ -64,7 +66,8 @@ const HeaderSection = styled.header`
     align-items: center;
     height: 80px;
     width: 100%;
-        
+    font-family: var(--ff-general); 
+    
     .header-nav-container{
         position: fixed;
         z-index: 1;
@@ -103,23 +106,49 @@ const HeaderSection = styled.header`
             color: var(--tclr-primary);
             margin: 0 1rem;
             cursor: pointer;
+            font-size: var(--fs-1);
+            font-weight: var(--fw-400);
         }
 
         .menu-container{
             display: none;
+            justify-content: center;
+            align-items: center;
         }
 
+        .icon {
+            font-size: var(--fs-1-5);
+            margin: 0 1rem;
+            cursor: pointer;
+            color: var(--text-color-primary);
+        } 
+        #menu{
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+        
         .active{
             border-bottom: 5px solid black;
         }
 
         @media (max-width: 767px){
+            
             .header-links{
                 display: none;
             }
 
             .menu-container{
                 display: block;
+                font-size: var(--fs-1-5);
+            }
+
+            .icon {
+                font-size: var(--fs-1);
+                margin: 0 1rem;
+                cursor: pointer;
+            } 
+            #menu{
+                font-size: var(--fs-1);
             }
         }
 
@@ -139,6 +168,8 @@ const MobileMenu = styled.nav`
     background: var(--background-color1);
     padding-bottom: 1rem; 
     transition: transform 0.5s;
+    font-family: var(--ff-general); 
+    
     transform: ${props => props.show ? "translateY(0px)" : "translateY(-400px)"};
     @media (max-width: 767px) {
         display: block;

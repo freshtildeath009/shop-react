@@ -1,8 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const ItemDetail = (props) => {
     const { name, category, id, image, new_price, old_price } = props.product
+
+    console.log(props);
     return (
         <>
             <ItemDetailsSection>
@@ -34,8 +37,11 @@ const ItemDetail = (props) => {
                                 <button id='btn-xlarge' className='btn-size'>XL</button>
                                 <button id='btn-xxlarge' className='btn-size'>XXL</button>
                             </div>
-                            <h5>Category: {category}</h5>
+                            <h5 id='category-text'>Category: {category}</h5>
                         </div>
+                        <Link to="/cart">
+                            <button id='btn-addtocart' >ADD TO CART</button>
+                        </Link>
                     </div>
                 </section>
 
@@ -51,7 +57,7 @@ const ItemDetailsSection = styled.section`
     justify-content: center;
     align-items: center;   
     font-family: var(--ff-general);
-
+    margin-bottom: 3rem;
         .item-detail-container{
             display: flex;
             justify-content: center;
@@ -92,6 +98,11 @@ const ItemDetailsSection = styled.section`
             font-weight: var(--fw-600);
         }
         
+        span{
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+        
         #price {
             margin: 1rem 0;
             font-size: var(--fs-1-3);
@@ -117,6 +128,19 @@ const ItemDetailsSection = styled.section`
         .btn-size:hover {
             border: 1px solid black;
         }
+
+        #btn-addtocart {
+            font-weight: var(--fw-600);
+            font-size: var(--fs-0-8);
+            color: var(--text-color-secondary);
+            margin-top: 1rem;
+            border: none;
+            padding: 0.9rem;
+            background-color: var(--background-color2);
+            cursor: pointer;
+            border: none;
+        }
+
         @media (max-width: 1024px){
             #title {
                 font-size: var(--fs-2-5);
@@ -126,6 +150,27 @@ const ItemDetailsSection = styled.section`
         @media (max-width: 768px){
             #title {
                 font-size: var(--fs-2);
+            }
+
+            #price {
+                font-size: var(--fs-1);
+            }
+            
+            #size-title {
+                font-size: var(--fs-1-1);
+            }
+
+            .btn-size {
+                font-size: var(--fs-0-8);
+            }
+
+            #category-text {
+                font-size: var(--fs-0-8);
+            }
+
+            #btn-addtocart {
+                font-size: var(--fs-0-8);
+                padding: 0.7rem;
             }
         }
 
@@ -154,8 +199,6 @@ const ItemDetailsSection = styled.section`
             #title {
                 font-size: var(--fs-1-5);
             }
-
-            
         }
 
         @media (max-width: 460px){

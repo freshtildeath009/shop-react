@@ -14,11 +14,14 @@
   --fs-2: 2rem;
   --fs-1-5: 1.5rem;
   --fs-1-3: 1.3rem;
+  --fs-1-1: 1.1rem;
   --fs-1: 1rem;
   --fs-0-9: 0.9rem;
   --fs-0-8: 0.8rem;
+  --fs-0-7: 0.7rem;
   --fs-0-6: 0.6rem;
   --fs-0-6: 0.5rem;
+  --fs-0-1: 0.1rem;
 
   /* Font Weight */
   --fw-800: 800;
@@ -33,11 +36,14 @@
   /* Text Color */
   --text-color-primary: rgb(0, 0, 0);
   --text-color-secondary: rgb(240, 248, 255);
+  --text-color-red: rgb(194, 10, 10);
 
   /* Background Color */
   --background-color0: linear-gradient(180deg, rgb(234, 222, 238) 0%, rgba(255, 255, 255, 1) 86%);
   --background-color1: rgb(255, 255, 255);
-  --background-color2: linear-gradient(rgb(216, 10, 171)50%, rgba(247, 0, 255, 0.322));
+  --background-color2: rgb(0, 0, 0);
+  --background-color3: rgba(48, 44, 44, 0.5);
+
 
 }
 
@@ -70,8 +76,12 @@ body {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
+button {
+  cursor: pointer;
+}
 
 /* * RESET SETTING // https://piccalil.li/blog/a-modern-css-reset */
 */

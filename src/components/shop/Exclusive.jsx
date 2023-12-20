@@ -32,8 +32,9 @@ const ExclusiveSection = styled.section`
         .exclusive-container {
             display: flex;
             justify-content: space-around;
+            padding: 2rem 0;
             align-items: center;
-            height: 100vh;
+            height: 100%;
             width: 100%;
             margin: 0 2rem;
         }

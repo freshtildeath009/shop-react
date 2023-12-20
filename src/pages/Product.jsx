@@ -11,7 +11,6 @@ const Product = () => {
     const product = all_product.find((item) => item.id === Number(id))
     return (
         <>
-
             <Breadcrumbs product={product} />
             <ItemDetail product={product} />
 

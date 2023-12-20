@@ -29,6 +29,7 @@ const FooterSection = styled.footer`
     align-items: center;
     flex-direction: column;
     font-family: var(--ff-general);
+    margin-top: 3rem;
 
         .footer-title-container {
             display: flex;

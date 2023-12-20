@@ -13,7 +13,7 @@ const Item = (props) => {
                 </div>
                 <div className='item-info-container'>
                     <h1 id='name'>{name}</h1>
-                    <h4 id='price'>{newPrice} {oldPrice}</h4>
+                    <h4 id='price'>{newPrice}$ <span>{oldPrice}</span> </h4>
                 </div>
             </SingleItem>
         </>
@@ -36,13 +36,8 @@ const SingleItem = styled.div`
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 300px;
-        }
-
-        #photo {
             height: 100%;
-            width: 100%;
-        } 
+        }
 
         .item-info-container {
             height: 100%;
@@ -52,6 +47,11 @@ const SingleItem = styled.div`
         #price {
             font-weight: var(--fw-500);
             font-size: var(--fs-0-8);
+        }
+
+        span {
+            text-decoration: line-through;
+            color: rgba(0, 0, 0, 0.5);
         }
         #name {
             font-weight: var(--fw-400);

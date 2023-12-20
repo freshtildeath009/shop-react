@@ -28,7 +28,8 @@ const OfferSection = styled.section`
     align-items: center;
     font-family: var(--ff-general);
     background: var(--background-color0);
-    height: 50vh;
+    padding: 3rem 0;
+    height: 100%;
 
         .offer-container {
             display: flex;
@@ -59,6 +60,9 @@ const OfferSection = styled.section`
 
         .input-container{
             display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
         }
 
         #input {
@@ -114,6 +118,13 @@ const OfferSection = styled.section`
 
             #button {
                 padding: 0.6rem 1.2rem;
+            }
+        }
+
+        @media (max-width: 368px) {
+            
+            .input-container{
+                flex-direction: column;
             }
         }
 `

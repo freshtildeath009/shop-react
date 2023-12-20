@@ -9,8 +9,9 @@ const Popular = () => {
                 <div className='popular-title-container'>
                     <h1 id='title'>POPULAR IN WOMEN</h1>
                     <br />
-                    <br />
                     <p id='line'></p>
+                    <br />
+                    <br />
                 </div>
                 <div className='product-container'>
                     {data_product.map(item => {
@@ -25,82 +26,83 @@ const Popular = () => {
 export default Popular
 
 const PopularSection = styled.section`
-    display: center;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-family: var(--ff-general);
+display: center;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+font-family: var(--ff-general);
+padding-bottom: 4rem;
 
-        .popular-title-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-        }
+    .popular-title-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
 
+    #title {
+        font-weight: var(--fw-800);
+        font-size: var(--fs-3);
+    }
+
+    #line {
+        background: black;
+        height: 5px;
+        width: 200px;
+    }
+
+    .product-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    @media (max-width: 1024px) {
         #title {
-            font-weight: var(--fw-800);
-            font-size: var(--fs-3);
+            font-size: var(--fs-2-5);
         }
 
         #line {
-            background: black;
-            height: 5px;
-            width: 200px;
+            height: 3px;
+        }
+    }
+
+    @media (max-width: 867px) {
+        #title {
+            font-size: var(--fs-1-5);
+        }
+    }
+
+    @media (max-width: 867px) {
+        #title {
+            font-size: var(--fs-1-3);
         }
 
-        .product-container{
-            display: flex;
-            justify-content: center;
-            align-items: center;    
-            flex-wrap: wrap;
-            height: 100%;
+        #line {
+            width: 130px;
+        }   
+    }
+
+    @media (max-width: 600px) {
+        #title {
+            font-size: var(--fs-1);
         }
 
-        @media (max-width: 1024px) {
-            #title {
-                font-size: var(--fs-2-5);
-            }
+        #line {
+            width: 100px;
+        }   
+    }
 
-            #line {
-                height: 3px;
-            }
+    @media (max-width: 375px) {
+        #title {
+            font-size: var(--fs-1);
         }
 
-        @media (max-width: 867px) {
-            #title {
-                font-size: var(--fs-1-5);
-            }
-        }
-
-        @media (max-width: 867px) {
-            #title {
-                font-size: var(--fs-1-3);
-            }
-
-            #line {
-                width: 130px;
-            }   
-        }
-
-        @media (max-width: 600px) {
-            #title {
-                font-size: var(--fs-1);
-            }
-
-            #line {
-                width: 100px;
-            }   
-        }
-
-        @media (max-width: 375px) {
-            #title {
-                font-size: var(--fs-0-9);
-            }
-
-            #line {
-                width: 90px;
-            }   
-        }
+        #line {
+            width: 90px;
+        }   
+    }
 `
