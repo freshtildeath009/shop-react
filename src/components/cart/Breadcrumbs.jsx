@@ -10,7 +10,7 @@ const Breadcrumbs = (props) => {
   )
 }
 
-export default Breadcrumbs
+export default React.memo(Breadcrumbs)
 
 const BreadcrumbsComponent = styled.div`
   display: flex;

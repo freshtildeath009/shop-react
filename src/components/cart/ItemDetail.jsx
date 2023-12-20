@@ -5,7 +5,6 @@ import styled from 'styled-components';
 const ItemDetail = (props) => {
     const { name, category, id, image, new_price, old_price } = props.product
 
-    console.log(props);
     return (
         <>
             <ItemDetailsSection>
@@ -44,13 +43,12 @@ const ItemDetail = (props) => {
                         </Link>
                     </div>
                 </section>
-
             </ItemDetailsSection>
         </>
     )
 }
 
-export default ItemDetail
+export default React.memo(ItemDetail)
 
 const ItemDetailsSection = styled.section`
     display: flex;
@@ -58,6 +56,7 @@ const ItemDetailsSection = styled.section`
     align-items: center;   
     font-family: var(--ff-general);
     margin-bottom: 3rem;
+
         .item-detail-container{
             display: flex;
             justify-content: center;
@@ -135,7 +134,7 @@ const ItemDetailsSection = styled.section`
             color: var(--text-color-secondary);
             margin-top: 1rem;
             border: none;
-            padding: 0.9rem;
+            padding: 1rem;
             background-color: var(--background-color2);
             cursor: pointer;
             border: none;

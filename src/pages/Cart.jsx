@@ -39,7 +39,7 @@ const Cart = () => {
                     <div className='single-product-container'>
                         <div className='left-container'>
                             <div className='product-image-container'>
-                                <img id='image' src="./images/product_1.png" alt="" />
+                                <img id='image' src="./images/product_2.png" alt="" />
                             </div>
                         </div>
                         <div className='right-container'>
@@ -139,10 +139,11 @@ const CartContainer = styled.section`
         .quantity-container{
             text-align: center;
         }
+
         #image {
             width: 170px;
             height: 166px;
-            padding: 0 0 2rem 0;
+            padding: 0 1rem 2rem 0;
         }
 
         h1{
@@ -189,8 +190,8 @@ const CartContainer = styled.section`
         }
 
         #btn-checkout {
-            font-size: var(--fs-1);
-            font-weight: var(--fs-800);
+            font-size: var(--fs-1-1);
+            font-weight: var(--fs-600);
             color: var(--text-color-secondary);
             background: var(--background-color2);
             width: 100%;

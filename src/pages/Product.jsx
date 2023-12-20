@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom'
-import Breadcrumbs from '../components/Breadcrumbs'
-import ItemDetail from '../components/ItemDetail'
+import Breadcrumbs from '../components/cart/Breadcrumbs'
+import DescriptionBox from '../components/cart/DescriptionBox'
+import ItemDetail from '../components/cart/ItemDetail'
 import { ShopContext } from '../context/ShopContext'
 
 const Product = () => {
@@ -13,7 +14,7 @@ const Product = () => {
         <>
             <Breadcrumbs product={product} />
             <ItemDetail product={product} />
-
+            <DescriptionBox />
         </>
     )
 }

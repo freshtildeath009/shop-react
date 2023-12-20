@@ -58,7 +58,7 @@ const Header = () => {
     )
 }
 
-export default Header
+export default React.memo(Header)
 
 const HeaderSection = styled.header`
     display: flex;
