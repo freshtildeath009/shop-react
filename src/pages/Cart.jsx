@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import CartItem from '../components/cart/CartItem';
 
 const Cart = () => {
 
@@ -9,80 +10,7 @@ const Cart = () => {
                 <img id='banner-shipping' src="./images/banner_shipping.jpg" alt="" />
             </Banner>
             <CartContainer>
-
-                <div className='list-item-container'>
-                    {/* single product */}
-                    <div className='single-product-container'>
-                        <div className='left-container'>
-                            <div className='product-image-container'>
-                                <img id='image' src="./images/product_1.png" alt="" />
-                            </div>
-                        </div>
-                        <div className='right-container'>
-                            <div className='description'>
-                                <h1>Boys Orange Colourblocked Hooded Sweatshirt</h1>
-                                <h3>Product ID: 23</h3>
-                                <h3>Category: Women</h3>
-                                <h2>Price: 100$</h2>
-                                <button id='btn-remove'>Remove</button>
-                            </div>
-                            <div className='quantity-container'>
-                                <h3 id='quantity'>Quantity</h3>
-                                <i class="fa-solid fa-arrow-up"></i>
-                                <p>0</p>
-                                <i class="fa-solid fa-arrow-down"></i>
-                            </div>
-                        </div>
-                    </div>
-                    {/* single product */}
-                    {/* single product */}
-                    <div className='single-product-container'>
-                        <div className='left-container'>
-                            <div className='product-image-container'>
-                                <img id='image' src="./images/product_2.png" alt="" />
-                            </div>
-                        </div>
-                        <div className='right-container'>
-                            <div className='description'>
-                                <h1>Boys Orange Colour blocked Hooded Sweatshirt</h1>
-                                <h3>Product ID: 23</h3>
-                                <h3>Category: Women</h3>
-                                <h2>Price: 100$</h2>
-                                <button id='btn-remove'>Remove</button>
-                            </div>
-                            <div className='quantity-container'>
-                                <h3>Quantity</h3>
-                                <i class="fa-solid fa-arrow-up"></i>
-                                <p>0</p>
-                                <i class="fa-solid fa-arrow-down"></i>
-                            </div>
-                        </div>
-                    </div>
-                    {/* single product */}
-                </div>
-
-                <div className='table-container'>
-                    <table>
-                        <tr>
-                            <th>Oder summary</th>
-                            <th >Item</th>
-                        </tr>
-                        <tr>
-                            <th>Subtotal</th>
-                            <th >1000$</th>
-                        </tr>
-                        <tr>
-                            <th>Order total</th>
-                            <th >1000$</th>
-                        </tr>
-                    </table>
-                    <div className='checkout-container'>
-                        <h3>Your order qualifies for free standard shipping. <br /> Click "Checkout" to reserve Cart contents for 60 minutes.</h3>
-                        <button id='btn-checkout'>CHECKOUT</button>
-                    </div>
-                </div>
-
-
+                <CartItem />
             </CartContainer >
         </ >
     )

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const DescriptionBox = () => {
     const [description, setDescription] = useState(false)
 
-    console.log("Hello");
+
     const _handleShowDescription = () => {
         setDescription(!description)
     }

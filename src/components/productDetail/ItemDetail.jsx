@@ -1,9 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+// import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { ShopContext } from '../../context/ShopContext';
 
 const ItemDetail = (props) => {
     const { name, category, id, image, new_price, old_price } = props.product
+    const { _addToCart } = useContext(ShopContext)
 
     return (
         <>
@@ -38,12 +40,12 @@ const ItemDetail = (props) => {
                             </div>
                             <h5 id='category-text'>Category: {category}</h5>
                         </div>
-                        <Link to="/cart">
-                            <button id='btn-addtocart' >ADD TO CART</button>
-                        </Link>
+                        {/* <Link to="/cart"> */}
+                        <button id='btn-addtocart' onClick={() => _addToCart(id)}>ADD TO CART</button>
+                        {/* </Link> */}
                     </div>
                 </section>
-            </ItemDetailsSection>
+            </ItemDetailsSection >
         </>
     )
 }
